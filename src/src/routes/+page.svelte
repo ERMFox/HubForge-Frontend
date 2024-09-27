@@ -1,23 +1,13 @@
 <script>
-	let peerAddress = '';
-
-	function connectToPeer() {
-		console.log("Connecting to peer:", peerAddress);
-		// Add your peer connection logic here
-	}
+	// Import the NavBar component from the components folder
+	import NavBar from '../components/NavBar.svelte';
 </script>
 
 <main>
-	<div class="storage-page">
-		<h1>SHOW ME YOUR STORAGE</h1>
-		<input type="text" bind:value={peerAddress} placeholder="Enter peer address" />
-		<button on:click={connectToPeer}>Connect</button>
-	</div>
-</main>
+	<NavBar />
+	<h1>Welcome to HubForge</h1>
+	<!-- Load the NavBar component here -->
 
-<style>
-	input, button {
-		margin: 10px;
-		padding: 10px;
-	}
-</style>
+
+	<!-- Other content or components go here -->
+</main>
