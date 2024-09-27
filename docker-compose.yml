@@ -1,0 +1,36 @@
+version: '3'
+services:
+  hub-forge-frontend:
+    build:
+      context: ./
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./src:/usr/src/app
+    command:
+      - npm run dev:watch
+    environment:
+      - NODE_ENV=development
+    networks:
+      - HubForge
+
+  # Add portainer if you want a web interface to watch your containers, otherwise remove it
+
+  portainer:
+    image: portainer/portainer-ce
+    container_name: portainer
+    restart: always
+    ports:
+      - "9000:9000"  # Portainer GUI runs on port 9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  # To manage Docker on the host
+      - portainer_data:/data  # Persistent storage for Portainer
+    networks:
+      - HubForge
+
+volumes:
+  portainer_data:
+
+networks:
+  HubForge:
+    driver: bridge
