@@ -128,3 +128,35 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Editor-specific settings
+
+# VSCode
+.vscode/
+.vscode/**/workspaceStorage/
+
+# JetBrains IDEs (e.g., IntelliJ, PyCharm, WebStorm)
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/vcs.xml
+
+# Sublime Text
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*.swn
+
+# Emacs
+*~
+.#*
+
+# Eclipse IDE
+.project
+.classpath
+.csettings
