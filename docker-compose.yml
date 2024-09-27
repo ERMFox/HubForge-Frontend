@@ -7,8 +7,7 @@ services:
       - "5173:5173"
     volumes:
       - ./src:/usr/src/app
-    command:
-      - npm run dev:watch
+    command: npm run dev:watch
     environment:
       - NODE_ENV=development
     networks:
@@ -18,7 +17,7 @@ services:
 
   portainer:
     image: portainer/portainer-ce
-    container_name: portainer
+    container_name: hubforgeportainer
     restart: always
     ports:
       - "9000:9000"  # Portainer GUI runs on port 9000

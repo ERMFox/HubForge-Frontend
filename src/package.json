@@ -10,7 +10,7 @@
 		"test": "vitest",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"dev:watch": "nodemon --exec 'npm run dev' --ext js,ts,svelte"
+		"dev:watch": "nodemon --exec 'npm run dev' --ext js,ts,svelte,css"
 	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "^5.0.0",

@@ -5,7 +5,7 @@ FROM node:20
 WORKDIR /usr/src/app
 
 # Copy package files first for better caching
-COPY package*.json ./
+COPY /src/package*.json ./
 RUN npm install
 # Then copy the rest of the source code
 COPY ./src ./
