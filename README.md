@@ -10,7 +10,7 @@ Frontend for a Peer-to-Peer Wiki and Note Platform built in JavaScript. Enables 
 # Installation
 Clone the repository:
 ```sh
-git clone https://github.com/yourusername/HubForge-Frontend.git
+git clone https://github.com/ERMFox/HubForge-Frontend.git
 ```
 Navigate into the project directory:
 ```sh
