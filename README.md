@@ -3,7 +3,7 @@ Frontend for a Peer-to-Peer Wiki and Note Platform built in JavaScript. Enables 
 
 # Project Structure
 This is part of the HubForge Project. To run the full platform, you will also need the backend component.
-View the [Backend](link here as soon as initialized) for setup and details on running the complete project.
+View the [Backend](https://github.com/ERMFox/HubForge-Backend) for setup and details on running the complete project.
 
 # Features
 - Peer-to-peer collaboration
