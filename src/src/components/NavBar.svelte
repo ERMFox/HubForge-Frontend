@@ -31,7 +31,7 @@
         display: flex;
         overflow-x: auto; /* Make the nav bar scrollable horizontally */
         white-space: nowrap; /* Prevent wrapping */
-        background-color: aqua;
+        background-color: darkred;
         justify-content: center;
         align-items: center;
     }
@@ -42,6 +42,13 @@
         flex-shrink: 0; /* Prevent items from shrinking when scrolling */
         position: relative;
         display: inline-block;
+        background-color: darkred;
+        outline: none;
+    }
+
+    button, button:focus, button:hover {
+        outline: none;
+        border: none;
     }
 
     .nav-item::after {
@@ -61,7 +68,7 @@
 
     .nav-item.active {
         font-weight: bold; /* Highlight active item */
-        color: darkblue;
+        color: white;
     }
 
     .nav-item.active::after {
@@ -71,11 +78,11 @@
 
 <div class="nav-container">
     {#each navItems as item}
-        <div
+        <button type="button"
                 class="nav-item {item === activeItem ? 'active' : ''}"
                 on:click={() => setActive(item)}
         >
             {item}
-        </div>
+        </button>
     {/each}
 </div>
