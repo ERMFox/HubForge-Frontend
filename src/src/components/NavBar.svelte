@@ -77,12 +77,16 @@
 </style>
 
 <div class="nav-container">
-    {#each navItems as item}
-        <button type="button"
-                class="nav-item {item === activeItem ? 'active' : ''}"
-                on:click={() => setActive(item)}
-        >
-            {item}
-        </button>
-    {/each}
+    {#if navItems.length === 0}
+        <div class="nav-item">HubForge</div>
+    {:else}
+        {#each navItems as item}
+            <button type="button"
+                    class="nav-item {item === activeItem ? 'active' : ''}"
+                    on:click={() => setActive(item)}
+            >
+                {item}
+            </button>
+        {/each}
+    {/if}
 </div>
