@@ -54,7 +54,7 @@
                     ${items.items ? renderSideItems(items.items) : ''}
                 </div>`;
         } else if (typeof items === 'string') {
-            html += `<button class="side-item ${activeItem === items ? 'active' : ''}" onclick="setActive('${items}')">${items}</button>`;
+            html += `<div class="side-item ${selectedItem === items ? 'active' : ''}" onclick="setActive('${items}')">${items}</div>`;
         }
 
         return html;
@@ -90,7 +90,7 @@
         margin-left: 20px;
     }
 
-    button.side-item {
+    div.side-item {
         display: block;
         width: 100%;
         background: none;
@@ -99,8 +99,9 @@
         cursor: pointer;
     }
 
-    button.side-item:hover {
+    div.side-item:hover {
         background-color: lightgray;
+        cursor: pointer;
     }
 
     .side-item.active {
@@ -108,9 +109,4 @@
         color: blue;
     }
 
-    button, button:focus, button:hover {
-        outline: none;
-        border: none;
-        background-color: darkred;
-    }
 </style>
