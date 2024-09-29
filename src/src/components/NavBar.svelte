@@ -1,9 +1,13 @@
 <script>
     import { onMount } from 'svelte';
-
+    import {activeProject} from "./store.js";
     // Store the nav items from the backend
     let navItems = [];
-    let activeItem = ''; // Track the currently active item
+    let activeItem;
+
+    activeProject.subscribe((value) => {
+        activeItem = value;
+    })
 
     // Simulate fetching data from the backend API
     async function fetchNavItems() {
@@ -17,7 +21,7 @@
 
     // Function to set the clicked item as active
     function setActive(item) {
-        activeItem = item;
+        activeProject.set(item);
     }
 
     // Load the nav items on component mount

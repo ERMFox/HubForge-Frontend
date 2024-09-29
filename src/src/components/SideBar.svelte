@@ -1,7 +1,17 @@
 <script>
     import { onMount } from 'svelte';
+    import {activeProject} from "./store.js";
 
     // Store the nav items from the backend
+
+    activeProject.subscribe((value) =>{
+        console.log(value);
+        fetchSideItems(value)
+    })
+    activeProject.subscribe((value) =>{
+        console.log(value);
+    })
+
     let sideItems = [];
     let selectedItem = ''; // Track the currently active item
 
@@ -33,7 +43,7 @@
 
     // Function to set the clicked item as active
     function setActive(item) {
-        selectedItem = item;
+        activeProject.set(item);
         console.log(selectedItem);
     }
 
